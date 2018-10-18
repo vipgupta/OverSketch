@@ -1,6 +1,6 @@
 # OverSketch
 
-![alt text](OverSketch/bMM.png)
+![OverSketch based blocked multiply](OverSketch/bMM.png)
 
 OverSketch.py function implements OverSketch from 
 https://people.eecs.berkeley.edu/~vipul_gupta/oversketch.pdf
