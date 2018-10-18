@@ -20,4 +20,4 @@ BigMatrix objects A (m x n) and B (n x l) should satisfy:
 2. b should divide d, m and l
 3. Columns and rows of A and B, respectively, are unsharded in AWS S3 storage (however, this code can be trivially generalized)
 
-Returns: A numpywren BigMatrix that contains the sketched product of A and B in S3
+Returns: A numpywren BigMatrix stored in AWS S3 that contains the sketched product of A and B
