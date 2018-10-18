@@ -5,7 +5,7 @@ https://people.eecs.berkeley.edu/~vipul_gupta/oversketch.pdf
 
 Running these files would require the pywren package (http://pywren.io/) and the numpywren package (https://github.com/Vaishaal/numpywren) to be installed.
 
-It calculates A*B approximately using sketching on AWS Lambda.
+It calculates AxB approximately using sketching on AWS Lambda.
 Takes arguments: 
 BigMatrix 'A' 
 BigMatrix 'B' 
@@ -18,4 +18,3 @@ BigMatrix objects A (m x n) and B (n x l) should satisfy:
 -Columns and rows of A and B, respectively, are unsharded in AWS S3 storage (however, this code can be trivially generalized)
 
 Returns: A numpywren BigMatrix that contains the sketched product of A and B in S3
-"""
