@@ -1,5 +1,7 @@
 # OverSketch
 
+![alt text](OverSketch/bMM.pdf)
+
 OverSketch.py function implements OverSketch from 
 https://people.eecs.berkeley.edu/~vipul_gupta/oversketch.pdf
 
