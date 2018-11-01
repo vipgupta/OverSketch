@@ -5,9 +5,9 @@
 OverSketch.py function implements OverSketch from 
 https://people.eecs.berkeley.edu/~vipul_gupta/oversketch.pdf
 
-Running these files would require the pywren package (http://pywren.io/) and the numpywren package (https://github.com/Vaishaal/numpywren) to be installed.
+Running these files would require the pywren (http://pywren.io/) and the numpywren (https://github.com/Vaishaal/numpywren) packages to be installed. 
 
-It calculates AxB approximately using sketching on AWS Lambda.
+It calculates AxB approximately using sketching on AWS Lambda in a cost-efficient fashion.
 
 Takes arguments: 
 1. BigMatrix 'A' 
