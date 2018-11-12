@@ -3,7 +3,7 @@
 <img src="images/bMM.png" height="300">
 
 OverSketch.py function implements OverSketch from 
-https://people.eecs.berkeley.edu/~vipul_gupta/oversketch.pdf
+https://arxiv.org/pdf/1811.02653.pdf
 
 Running these files would require the pywren (http://pywren.io/) and the numpywren (https://github.com/Vaishaal/numpywren) packages to be installed. 
 
