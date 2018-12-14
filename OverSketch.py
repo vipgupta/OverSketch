@@ -25,8 +25,6 @@ from numpywren import binops
 from numpywren.matrix_init import shard_matrix
 
 
-
-
 def OverSketchFunc(A, B, d, thres = 0.95):
 
     m = A.shape[0]
@@ -60,7 +58,7 @@ def OverSketchFunc(A, B, d, thres = 0.95):
         sketch_block = np.zeros((m, b))
         for i in range(n):
             sketch_block[:, hash_local[i]] += flip_local[i]*A[:,i]
-        sketch.put_block(sketch_block/np.sqrt(N), x, y)
+        sketch.put_block(sketch_block, x, y)
         return 0
 
     pwex = pywren.lambda_executor()
@@ -106,10 +104,12 @@ def OverSketchFunc(A, B, d, thres = 0.95):
     def blockMatMulReduction(tensorAB, AB, id):
         """
         Reduces the output from computation phase to get A*B
+        Variable 'count' keeps track of number of blocks that have returned 
         """
         i = id[0]
         j = id[1]
         X = None
+        count = 1
         for k in range(N):
             if X is None:
                 try:
@@ -120,10 +120,11 @@ def OverSketchFunc(A, B, d, thres = 0.95):
             else:
                 try:
                     X = X + tensorAB[k].get_block(i,j)
+                    count = count+1
                 except Exception as e:
                     print(e)
                     pass
-        AB.put_block(X, i, j)  
+        AB.put_block(X/count, i, j)  
         return 0
 
     AB = matrix.BigMatrix("AxB_{0}_{1}".format(m, l), shape=(m, l), shard_sizes=(b, b))
